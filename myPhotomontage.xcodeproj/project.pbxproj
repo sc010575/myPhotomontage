@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C52C8B331FD69FC800FA06E5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B321FD69FC800FA06E5 /* AppDelegate.swift */; };
-		C52C8B351FD69FC800FA06E5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B341FD69FC800FA06E5 /* ViewController.swift */; };
 		C52C8B381FD69FC800FA06E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52C8B361FD69FC800FA06E5 /* Main.storyboard */; };
 		C52C8B3A1FD69FC800FA06E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52C8B391FD69FC800FA06E5 /* Assets.xcassets */; };
 		C52C8B3D1FD69FC800FA06E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52C8B3B1FD69FC800FA06E5 /* LaunchScreen.storyboard */; };
 		C52C8B481FD69FC800FA06E5 /* myPhotomontageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B471FD69FC800FA06E5 /* myPhotomontageTests.swift */; };
+		C52C8B571FD6A9F600FA06E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B541FD6A9F600FA06E5 /* MainViewController.swift */; };
+		C52C8B581FD6A9F600FA06E5 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B551FD6A9F600FA06E5 /* PhotosViewController.swift */; };
+		C52C8B591FD6A9F600FA06E5 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B561FD6A9F600FA06E5 /* PhotoCell.swift */; };
+		C52C8B5D1FD6AAD300FA06E5 /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B5B1FD6AAD300FA06E5 /* PhotoWriter.swift */; };
+		C52C8B5E1FD6AAD300FA06E5 /* UIImage+Photomontage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B5C1FD6AAD300FA06E5 /* UIImage+Photomontage.swift */; };
 		EA237AABA9DF25E8FF0E0F55 /* Pods_myPhotomontage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 637298A1CD250BB684EC3553 /* Pods_myPhotomontage.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,7 +36,6 @@
 		9823FEBBA789E30CA51A226F /* Pods-myPhotomontage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-myPhotomontage.release.xcconfig"; path = "Pods/Target Support Files/Pods-myPhotomontage/Pods-myPhotomontage.release.xcconfig"; sourceTree = "<group>"; };
 		C52C8B2F1FD69FC800FA06E5 /* myPhotomontage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myPhotomontage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52C8B321FD69FC800FA06E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C52C8B341FD69FC800FA06E5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C52C8B371FD69FC800FA06E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C52C8B391FD69FC800FA06E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C52C8B3C1FD69FC800FA06E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		C52C8B431FD69FC800FA06E5 /* myPhotomontageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myPhotomontageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C52C8B471FD69FC800FA06E5 /* myPhotomontageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPhotomontageTests.swift; sourceTree = "<group>"; };
 		C52C8B491FD69FC800FA06E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C52C8B541FD6A9F600FA06E5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C52C8B551FD6A9F600FA06E5 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
+		C52C8B561FD6A9F600FA06E5 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		C52C8B5B1FD6AAD300FA06E5 /* PhotoWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
+		C52C8B5C1FD6AAD300FA06E5 /* UIImage+Photomontage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Photomontage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +100,11 @@
 		C52C8B311FD69FC800FA06E5 /* myPhotomontage */ = {
 			isa = PBXGroup;
 			children = (
+				C52C8B5A1FD6AA9E00FA06E5 /* Helper */,
+				C52C8B531FD6A95C00FA06E5 /* ViewController */,
+				C52C8B521FD6A92500FA06E5 /* Storyboard */,
 				C52C8B321FD69FC800FA06E5 /* AppDelegate.swift */,
-				C52C8B341FD69FC800FA06E5 /* ViewController.swift */,
-				C52C8B361FD69FC800FA06E5 /* Main.storyboard */,
 				C52C8B391FD69FC800FA06E5 /* Assets.xcassets */,
-				C52C8B3B1FD69FC800FA06E5 /* LaunchScreen.storyboard */,
 				C52C8B3E1FD69FC800FA06E5 /* Info.plist */,
 			);
 			path = myPhotomontage;
@@ -109,6 +117,34 @@
 				C52C8B491FD69FC800FA06E5 /* Info.plist */,
 			);
 			path = myPhotomontageTests;
+			sourceTree = "<group>";
+		};
+		C52C8B521FD6A92500FA06E5 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C52C8B361FD69FC800FA06E5 /* Main.storyboard */,
+				C52C8B3B1FD69FC800FA06E5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		C52C8B531FD6A95C00FA06E5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C52C8B541FD6A9F600FA06E5 /* MainViewController.swift */,
+				C52C8B561FD6A9F600FA06E5 /* PhotoCell.swift */,
+				C52C8B551FD6A9F600FA06E5 /* PhotosViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C52C8B5A1FD6AA9E00FA06E5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C52C8B5B1FD6AAD300FA06E5 /* PhotoWriter.swift */,
+				C52C8B5C1FD6AAD300FA06E5 /* UIImage+Photomontage.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		DF68CECD24D0DCB5B153AC3D /* Pods */ = {
@@ -280,7 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C52C8B351FD69FC800FA06E5 /* ViewController.swift in Sources */,
+				C52C8B5D1FD6AAD300FA06E5 /* PhotoWriter.swift in Sources */,
+				C52C8B5E1FD6AAD300FA06E5 /* UIImage+Photomontage.swift in Sources */,
+				C52C8B571FD6A9F600FA06E5 /* MainViewController.swift in Sources */,
+				C52C8B591FD6A9F600FA06E5 /* PhotoCell.swift in Sources */,
+				C52C8B581FD6A9F600FA06E5 /* PhotosViewController.swift in Sources */,
 				C52C8B331FD69FC800FA06E5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
