@@ -31,7 +31,7 @@ class PhotosViewController: UICollectionViewController {
         return selectedPhotosSubject.asObservable()
    }
    
-//  let bag = DisposeBag()
+  let bag = DisposeBag()
     
   static func loadPhotos() -> PHFetchResult<PHAsset> {
     let allPhotosOptions = PHFetchOptions()

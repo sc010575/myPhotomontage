@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
   @IBOutlet weak var itemAdd: UIBarButtonItem!
 
   private let bag = DisposeBag()
-  private let images = Variable<[UIImage]>([])
+  fileprivate let images = Variable<[UIImage]>([])
     
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -62,7 +62,12 @@ class MainViewController: UIViewController {
    guard  let photosViewController = storyboard?.instantiateViewController(
     withIdentifier: "PhotosViewController") as? PhotosViewController else { return }
     
-    photosViewController.selectedPhotos
+    let newPhoto = photosViewController.selectedPhotos.share()
+    
+    newPhoto
+        .takeWhile { [weak self] image in
+            return (self?.images.value.count ?? 0) < 6
+        }
         .subscribe(onNext: { [weak self] newImage in
             guard let images = self?.images else { return }
             images.value.append(newImage)
@@ -70,23 +75,44 @@ class MainViewController: UIViewController {
             }, onDisposed: {
                 print("completed photo selection")
         })
-        .disposed(by: bag)
+        .disposed(by: photosViewController.bag)
     
+    newPhoto.ignoreElements()
+        .subscribe(onCompleted:{ [weak self] in
+            self?.updateNavigationIcon()
+        })
+        .disposed(by: photosViewController.bag)
+    
+
     navigationController!.pushViewController(photosViewController, animated:
         true)
 
   }
 
-  private func updateUI(photos: [UIImage]) {
-        buttonSave.isEnabled = photos.count > 0 && photos.count % 2 == 0
-        buttonClear.isEnabled = photos.count > 0
-        itemAdd.isEnabled = photos.count < 6
-        title = photos.count > 0 ? "\(photos.count) photos" : "Collage"
-  }
     
   func showMessage(_ title: String, description: String? = nil) {
     let alert = UIAlertController(title: title, message: description, preferredStyle: .alert)
     alert.addAction(UIAlertAction(title: "Close", style: .default, handler: { [weak self] _ in self?.dismiss(animated: true, completion: nil)}))
     present(alert, animated: true, completion: nil)
   }
+}
+
+// MARK: Private Extension
+
+private extension MainViewController {
+    
+    func updateUI(photos: [UIImage]) {
+        buttonSave.isEnabled = photos.count > 0 && photos.count % 2 == 0
+        buttonClear.isEnabled = photos.count > 0
+        itemAdd.isEnabled = photos.count < 6
+        title = photos.count > 0 ? "\(photos.count) photos" : "Collage"
+    }
+
+    func updateNavigationIcon() {
+        let icon = imagePreview.image?
+            .scaled(CGSize(width: 22, height: 22))
+            .withRenderingMode(.alwaysOriginal)
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: icon,
+                                                           style: .done, target: nil, action: nil)
+    }
 }
