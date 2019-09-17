@@ -11,7 +11,6 @@
 		C52C8B381FD69FC800FA06E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52C8B361FD69FC800FA06E5 /* Main.storyboard */; };
 		C52C8B3A1FD69FC800FA06E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C52C8B391FD69FC800FA06E5 /* Assets.xcassets */; };
 		C52C8B3D1FD69FC800FA06E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C52C8B3B1FD69FC800FA06E5 /* LaunchScreen.storyboard */; };
-		C52C8B481FD69FC800FA06E5 /* myPhotomontageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B471FD69FC800FA06E5 /* myPhotomontageTests.swift */; };
 		C52C8B571FD6A9F600FA06E5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B541FD6A9F600FA06E5 /* MainViewController.swift */; };
 		C52C8B581FD6A9F600FA06E5 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B551FD6A9F600FA06E5 /* PhotosViewController.swift */; };
 		C52C8B591FD6A9F600FA06E5 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52C8B561FD6A9F600FA06E5 /* PhotoCell.swift */; };
@@ -41,7 +40,6 @@
 		C52C8B3C1FD69FC800FA06E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C52C8B3E1FD69FC800FA06E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52C8B431FD69FC800FA06E5 /* myPhotomontageTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = myPhotomontageTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C52C8B471FD69FC800FA06E5 /* myPhotomontageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPhotomontageTests.swift; sourceTree = "<group>"; };
 		C52C8B491FD69FC800FA06E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C52C8B541FD6A9F600FA06E5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		C52C8B551FD6A9F600FA06E5 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +111,6 @@
 		C52C8B461FD69FC800FA06E5 /* myPhotomontageTests */ = {
 			isa = PBXGroup;
 			children = (
-				C52C8B471FD69FC800FA06E5 /* myPhotomontageTests.swift */,
 				C52C8B491FD69FC800FA06E5 /* Info.plist */,
 			);
 			path = myPhotomontageTests;
@@ -168,7 +165,6 @@
 				C52C8B2C1FD69FC800FA06E5 /* Frameworks */,
 				C52C8B2D1FD69FC800FA06E5 /* Resources */,
 				C9D697E0971E5EAFB216C663 /* [CP] Embed Pods Frameworks */,
-				E82BA17D2E5565D2DBA89CB4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,7 +278,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-myPhotomontage/Pods-myPhotomontage-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-myPhotomontage/Pods-myPhotomontage-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -291,22 +287,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myPhotomontage/Pods-myPhotomontage-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E82BA17D2E5565D2DBA89CB4 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-myPhotomontage/Pods-myPhotomontage-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-myPhotomontage/Pods-myPhotomontage-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -329,7 +310,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C52C8B481FD69FC800FA06E5 /* myPhotomontageTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,11 +458,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VT29F6R7U;
 				INFOPLIST_FILE = myPhotomontage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dreamapps.myPhotomontage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -495,11 +475,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8VT29F6R7U;
 				INFOPLIST_FILE = myPhotomontage/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = dreamapps.myPhotomontage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

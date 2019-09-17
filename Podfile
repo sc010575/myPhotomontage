@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'myPhotomontage' do
-    pod 'RxSwift', '~> 3.4'
+    pod 'RxSwift', '~> 4.0'
 end
 
 # enable tracing resources
