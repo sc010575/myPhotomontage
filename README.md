@@ -1,5 +1,5 @@
 # myPhotomontage
-myPhotomontage is a simple application which is using Swift 3.2 and RxSwift. This application will result of making a 
+myPhotomontage is a simple application which is using Swift 4.2 and RxSwift. This application will result of making a 
 composite photograph by cutting, gluing, rearranging and overlapping two or more photographs into a new image 
 from the device photo library.
 
