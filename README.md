@@ -5,7 +5,7 @@ from the device photo library.
 
 ## Technology used
 
-- Swift 3.2
+- Swift 4.2
 - RxSwift 
 - Photo editing 
 - Cocoapods
@@ -15,3 +15,4 @@ from the device photo library.
  Clone or download the project. Go to the project folder in the command line. Locate the podfile. Run pod install in the command line 
  to run the project.
   
+## Please note that for this demo project no test target included.
